@@ -38,8 +38,13 @@ int main(int argc, char *argv[]) {
     // Fill the texture with 256 colors
     
     // Update the texture with the pixel data
+    int poly[]={100,50,150,100,50,100,0,0,0,0,0};
+    
     clears(0,255,255);
-    circle(400,300,100,0,0,0);
+    polygon((int *)poly,6,0,0,0);
+
+    
+     
     SDL_UpdateTexture(texture, NULL, screen, WIDTH);
 
     // Main loop
